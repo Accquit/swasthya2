@@ -60,28 +60,28 @@ const therapists = [
   {
     id: 1,
     name: 'Dr. Sarah Johnson',
-    specialty: 'Clinical Psychologist',
+    specialty: 'Clinical Psychologist, Jaipur',
     experience: '12 years',
     rating: 4.9,
-    price: '₹2000',
+    price: '₹300',
     available: true
   },
   {
     id: 2,
-    name: 'Dr. Michael Chen',
-    specialty: 'Psychiatrist',
+    name: 'Dr. Raj Sharma',
+    specialty: 'Psychiatrist, Jaipur',
     experience: '15 years',
     rating: 4.8,
-    price: '₹2500',
+    price: '₹300',
     available: true
   },
   {
     id: 3,
-    name: 'Dr. Emily Davis',
-    specialty: 'Marriage & Family Therapist',
+    name: 'Ritu Kumari',
+    specialty: 'Marriage & Family Therapist, Jaipur',
     experience: '8 years',
     rating: 4.7,
-    price: '₹1800',
+    price: '₹500',
     available: false
   }
 ];

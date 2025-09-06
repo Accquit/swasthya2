@@ -15,8 +15,8 @@ const doctors = [
     specialty: 'General Medicine',
     rating: 4.9,
     experience: '12 years',
-    location: 'Mumbai',
-    price: '₹800',
+    location: 'SMS Hospital, Jaipur',
+    price: '₹250',
     available: true,
     nextSlot: '2:00 PM Today'
   },
@@ -26,8 +26,8 @@ const doctors = [
     specialty: 'Cardiology',
     rating: 4.8,
     experience: '15 years',
-    location: 'Delhi',
-    price: '₹1200',
+    location: 'Manipal Hospital, Jaipur',
+    price: '₹500',
     available: true,
     nextSlot: '3:30 PM Today'
   },
@@ -37,8 +37,8 @@ const doctors = [
     specialty: 'Dermatology',
     rating: 4.7,
     experience: '8 years',
-    location: 'Bangalore',
-    price: '₹900',
+    location: 'AIIMS, Delhi',
+    price: '₹100',
     available: false,
     nextSlot: '10:00 AM Tomorrow'
   },
@@ -48,7 +48,7 @@ const doctors = [
     specialty: 'Pediatrics',
     rating: 4.9,
     experience: '20 years',
-    location: 'Chennai',
+    location: 'Apollo Multi-Speciality Hospital',
     price: '₹700',
     available: true,
     nextSlot: '4:00 PM Today'
