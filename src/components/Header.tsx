@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Heart, User, LogOut } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 const Header = () => {
   const { user, signOut } = useAuth();
@@ -72,15 +73,14 @@ const Header = () => {
           {/* Auth Button */}
           <div className="hidden md:flex items-center space-x-4">
             {user ? (
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="flex items-center space-x-2"
-                onClick={handleSignOut}
-              >
-                <LogOut className="w-4 h-4" />
-                <span>Sign Out</span>
-              </Button>
+              <Link to="/profile" className="flex items-center space-x-2">
+                <Avatar className="w-8 h-8 border border-primary/30 hover:border-primary transition-colors">
+                  <AvatarFallback className="bg-primary/10 text-primary font-medium">
+                    {user.user_metadata?.first_name?.charAt(0) || ''}
+                    {user.user_metadata?.last_name?.charAt(0) || ''}
+                  </AvatarFallback>
+                </Avatar>
+              </Link>
             ) : (
               <Link to="/login">
                 <Button variant="outline" size="sm" className="flex items-center space-x-2">
@@ -123,18 +123,17 @@ const Header = () => {
                 </Link>
               ))}
               {user ? (
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full mt-2"
-                  onClick={() => {
-                    handleSignOut();
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  <LogOut className="w-4 h-4 mr-2" />
-                  Sign Out
-                </Button>
+                <Link to="/profile" className="pt-2">
+                  <Button variant="outline" size="sm" className="w-full flex items-center space-x-2">
+                    <Avatar className="w-6 h-6">
+                      <AvatarFallback className="bg-primary/10 text-primary font-medium text-xs">
+                        {user.user_metadata?.first_name?.charAt(0) || ''}
+                        {user.user_metadata?.last_name?.charAt(0) || ''}
+                      </AvatarFallback>
+                    </Avatar>
+                    <span>Profile</span>
+                  </Button>
+                </Link>
               ) : (
                 <Link to="/login" className="pt-2">
                   <Button variant="outline" size="sm" className="w-full">
