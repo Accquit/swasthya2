@@ -29,21 +29,19 @@ interface Appointment {
   notes?: string;
 }
 
-const handleSignOut = async () => {
-  const { error } = await signOut();
-  if (error) {
-    toast({
-      title: "Error",
-      description: "Failed to sign out. Please try again.",
-      variant: "destructive"
-    });
-  } else {
-    toast({
-      title: "Signed Out",
-      description: "You have been successfully signed out."
-    });
-  }
-};
+interface UserProfile {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  dateOfBirth: string;
+  gender: string;
+  address: string;
+  emergencyContact: string;
+  bloodType: string;
+  allergies: string[];
+  medications: string[];
+}
 
 const Profile = () => {
   const { user, signOut } = useAuth();
@@ -191,6 +189,25 @@ const Profile = () => {
       </div>
     );
   }
+
+  const handleSignOut = async () => {
+    console.log('Profile - Starting sign out');
+    const { error } = await signOut();
+    console.log('Profile - Sign out result:', { error });
+    
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to sign out. Please try again.",
+        variant: "destructive"
+      });
+    } else {
+      toast({
+        title: "Signed Out",
+        description: "You have been successfully signed out."
+      });
+    }
+  };
 
   const stats = getAppointmentStats();
 

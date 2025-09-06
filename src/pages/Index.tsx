@@ -34,23 +34,23 @@ const features = [
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'Patient',
-    content: 'Swasthya Health Hub has revolutionized how I manage my health. The AI symptom checker is incredibly accurate!',
+    name: 'Ramesh Choudhary',
+    role: 'Bagru, Rajasthan',
+    content: 'Swasthya Health Hub has revolutionized the healthcare solutions for my local community',
     rating: 5
   },
   {
-    name: 'Dr. Michael Chen',
-    role: 'Healthcare Provider',
-    content: 'The platform makes it easy to connect with patients and provide quality care remotely.',
+    name: 'Sulankita Kujur',
+    role: 'Chakradharpur, Jharkhand',
+    content: 'People from my village can now access basic healthcare, doctors and order medicines which was not at all possible earlier due to the remoteness of my village.',
     rating: 5
   },
   {
-    name: 'Emily Davis',
-    role: 'Mental Health Advocate',
-    content: 'The mental wellness features have been a game-changer for my daily well-being routine.',
-    rating: 5
-  }
+    name: 'Vansh Mehra',
+    role: 'Mumbai, Maharashtra',
+    content: 'The website is really easy to use and even my grandparents in the village use it for their doctor consultations.',
+    rating: 5
+  }
 ];
 
 const Index = () => {

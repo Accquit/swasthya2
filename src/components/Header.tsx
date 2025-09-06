@@ -12,7 +12,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleSignOut = async () => {
+    console.log('Header - Starting sign out');
     const { error } = await signOut();
+    console.log('Header - Sign out result:', { error });
     if (error) {
       toast({
         title: "Error",
@@ -50,7 +52,7 @@ const Header = () => {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <Heart className="w-5 h-5 text-white" />
             </div>
-            <span className="font-bold text-xl gradient-text">Swasthya Health Hub</span>
+            <span className="font-bold text-xl gradient-text">Swasthya</span>
           </Link>
 
           {/* Desktop Navigation */}
